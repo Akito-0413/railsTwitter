@@ -3,7 +3,11 @@
 <%= form_for @tweet do |f| %>
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_field :body, :size => 140 %>
+    <%= f.text_field :body, :size => 140, required: true %>
+  </div>
+   <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image, required: true %>
   </div>
   <%= f.submit "Tweetする" %>
 <% end %>
